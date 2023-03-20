@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;300;400;500;600;700&display=swap');
+
+:root {
+  --font-family-base: 'Encode Sans', sans-serif;
+
+  --font-weight-normal: normal;
+  --font-weight-bold: bold;
+
+  --font-size-3xs: 9px;
+  --font-size-xxs: 10px;
+  --font-size-xs: 12px;
+  --font-size-s: 13px;
+  --font-size-base: 15px;
+  --font-size-m: 18px;
+  --font-size-l: 22px;
+  --font-size-xl: 26px;
+  --font-size-xxl: 30px;
+  --font-size-3xl: 32px;
+  --font-size-4xl: 36px;
+  --font-size-5xl: 52px;
+  --font-size-6xl: 64px;
+}

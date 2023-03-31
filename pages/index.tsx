@@ -13,9 +13,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex items-center justify-center h-screen max-w-6xl mx-auto flex-col gap-4">
-        <div className="contenedor">
-          <Block className="text-right col-span-3 box-content Developing">
+      <main className="max-w-6xl mx-auto px-4 pt-4 md:pt-40">
+        <div className="contenedor mb-4">
+          <Block className="text-left md:text-right col-span-3 box-content Developing">
             <div className="text-5xl font-semibold pb-4 leading-tight">Developing software for 3 years</div>
           </Block>
 
@@ -67,12 +67,12 @@ export default function Home() {
             </div>
           </Block>
 
-          <Image src="/me.png" alt="me" width={300} height={300} className={`${styles.box} Me`} />
+          <Image src="/me.png" alt="me" width={300} height={300} className={`${styles.box} Me h-full w-full`} />
         </div>
 
         <Block className="w-full">
           <div className="font-bold text-xl mb-4">Skills & Experience 🛠️</div>
-          <div className="flex gap-8">
+          <div className="flex gap-8 flex-col md:flex-row">
             <div className="flex gap-4 shrink-0">
               <Image src="/dekalabs.png" alt="Dekalabs" width={48} height={48} className="w-12 h-12" />
               

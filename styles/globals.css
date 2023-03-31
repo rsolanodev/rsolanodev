@@ -23,7 +23,7 @@
   );
   --secondary-glow: radial-gradient(
     rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
+    rgba(255, 255, 255, 0)x
   );
 
   --tile-start-rgb: 239, 245, 249;
@@ -122,9 +122,7 @@ body::before {
     #e3e81d,
     #1de840,
     #1ddde8,
-    #2b1de8,
-    #dd00f3,
-    #dd00f3
+    #2b1de8
   );
   filter: blur(180px);
   width: 40vw;
@@ -135,7 +133,7 @@ body::before {
   transform: translate(-50%, -50%);
   z-index: -1;
   background-size: 1800% 1800%;
-  opacity: .2;
+  opacity: .32;
 
   -webkit-animation: rainbow 8s ease infinite;
   -z-animation: rainbow 8s ease infinite;
@@ -194,7 +192,7 @@ body::before {
   display: grid; 
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
   grid-template-rows: 0.4fr 1.2fr 1.2fr 0.8fr; 
-  gap: 16px 16px; 
+  gap: 1rem; 
   grid-template-areas: 
     "Developing Developing Developing Header Header Header Header Header"
     "Developing Developing Developing Details Details Details Me Me"
@@ -208,3 +206,18 @@ body::before {
 .Details { grid-area: Details; }
 .Me { grid-area: Me; }
 .About { grid-area: About; }
+
+@media only screen and (max-width: 768px) {
+  .contenedor {
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto auto auto auto auto auto auto; 
+    grid-template-areas: 
+      "Header"
+      "Developing"
+      "Details"
+      "Experience"
+      "About"
+      "Me"
+      "Networks";
+  }
+}

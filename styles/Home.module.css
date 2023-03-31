@@ -15,10 +15,9 @@
     #1de840,
     #1ddde8,
     #2b1de8,
-    #dd00f3,
     #dd00f3
   );
-  background-size: 1800% 1800%;
+  background-size: 900% 900%;
 
   -webkit-animation: rainbow 8s ease infinite;
   -z-animation: rainbow 8s ease infinite;

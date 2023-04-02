@@ -2,8 +2,13 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
 import Block from './components/Block'
+import IconGithub from './components/icons/IconGithub'
+import IconLinkedin from './components/icons/IconLinkedin'
+import IconEmail from './components/icons/IconEmail'
+import IconTwitter from './components/icons/IconTwitter'
+import IconInstagram from './components/icons/IconInstagram'
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Head>
@@ -36,7 +41,23 @@ export default function Home() {
             </Block>
           </div>
 
-          <Block className="Networks">My social networks</Block>
+          <Block className="Networks flex justify-between items-center">
+            <a href="https://github.com/rsolanodev" target="_blank">
+              <IconGithub/>
+            </a>
+            <a href="https://www.linkedin.com/in/rsolanoweb/" target="_blank">
+              <IconLinkedin/>
+            </a>
+            <a href="https://twitter.com/rsolanx" target="_blank">
+              <IconTwitter/>
+            </a>
+            <a href="https://www.instagram.com/rsolano.dev/" target="_blank">
+              <IconInstagram/>
+            </a>
+            <a href="mailto:rubensoljim@gmail.com" target="_blank">
+              <IconEmail/>
+            </a>
+          </Block>
 
           <Block className="font-bold text-xl Header">@rsolano.dev</Block>
 
@@ -94,3 +115,5 @@ export default function Home() {
     </>
   )
 }
+
+export default Home;

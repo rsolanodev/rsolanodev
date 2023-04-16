@@ -2,11 +2,14 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
 import Block from './components/Block'
-import IconGithub from './components/icons/IconGithub'
-import IconLinkedin from './components/icons/IconLinkedin'
-import IconEmail from './components/icons/IconEmail'
-import IconTwitter from './components/icons/IconTwitter'
-import IconInstagram from './components/icons/IconInstagram'
+
+import {
+  IconGithub,
+  IconLinkedin,
+  IconEmail,
+  IconTwitter,
+  IconInstagram
+} from './components/icons'
 
 const Home = () => {
   return (

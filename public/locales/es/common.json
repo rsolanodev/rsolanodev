@@ -1,0 +1,12 @@
+{
+  "title": "El mundo de Rubén",
+  "ad": "Desarrollando software con una serpiente 🐍",
+  "name": "Nombre",
+  "age": "Edad",
+  "location": "Ubicación",
+  "organization": "Organización",
+  "aboutMe": "Sobre mí 👨🏽‍💻",
+  "myLocation": "Valencia, España",
+  "myDescription": "¡Hola! Me alegra mucho verte por aquí. Mi nombre es Rubén y soy un ingeniero de software ubicado en Valencia, España. Desde que era pequeño siempre me ha interesado el software y desde entonces he he aprendido acerca de cada parte del mismo, incluyendo diseño UI/UX, Frontend, Backend, DevOps y actualmente IA.",
+  "skillsAndExperience": "Habilidades y Experiencia 🛠️"
+}

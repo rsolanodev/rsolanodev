@@ -5,9 +5,9 @@
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -23,7 +23,7 @@
   );
   --secondary-glow: radial-gradient(
     rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)x
+    rgba(255, 255, 255, 0) x
   );
 
   --tile-start-rgb: 239, 245, 249;
@@ -113,7 +113,7 @@ a {
 }
 
 body::before {
-  content: '';
+  content: "";
   background: linear-gradient(
     124deg,
     #ff2400,
@@ -128,12 +128,12 @@ body::before {
   width: 40vw;
   height: 40vh;
   position: absolute;
-  left: 50%; 
-  top: 50%; 
+  left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
   background-size: 1800% 1800%;
-  opacity: .32;
+  opacity: 0.32;
 
   -webkit-animation: rainbow 8s ease infinite;
   -z-animation: rainbow 8s ease infinite;
@@ -186,32 +186,44 @@ body::before {
   }
 }
 
-
-
 .contenedor {
-  display: grid; 
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
-  grid-template-rows: 0.4fr 1.2fr 1.2fr 0.8fr; 
-  gap: 1rem; 
-  grid-template-areas: 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.4fr 1.2fr 1.2fr 0.8fr;
+  gap: 1rem;
+  grid-template-areas:
     "Developing Developing Developing Header Header Header Header Header"
     "Developing Developing Developing Details Details Details Me Me"
     "Experience Experience Experience About About About Me Me"
-    "Networks Networks Networks About About About Me Me"; 
+    "Networks Networks Networks About About About Me Me";
 }
-.Developing { grid-area: Developing; }
-.Experience { grid-area: Experience; }
-.Networks { grid-area: Networks; }
-.Header { grid-area: Header; }
-.Details { grid-area: Details; }
-.Me { grid-area: Me; }
-.About { grid-area: About; }
+.Developing {
+  grid-area: Developing;
+}
+.Experience {
+  grid-area: Experience;
+}
+.Networks {
+  grid-area: Networks;
+}
+.Header {
+  grid-area: Header;
+}
+.Details {
+  grid-area: Details;
+}
+.Me {
+  grid-area: Me;
+}
+.About {
+  grid-area: About;
+}
 
 @media only screen and (max-width: 768px) {
   .contenedor {
-    grid-template-columns: 1fr; 
-    grid-template-rows: auto auto auto auto auto auto auto; 
-    grid-template-areas: 
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-areas:
       "Header"
       "Developing"
       "Details"

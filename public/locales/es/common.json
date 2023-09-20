@@ -1,12 +1,22 @@
 {
-  "title": "El mundo de Rubén",
-  "ad": "Desarrollando software con una serpiente 🐍",
-  "name": "Nombre",
-  "age": "Edad",
-  "location": "Ubicación",
-  "organization": "Organización",
   "aboutMe": "Sobre mí 👨🏽‍💻",
-  "myLocation": "Valencia, España",
+  "age": "Edad",
+  "code": "Codifica",
+  "contributions": "Contribuciones",
+  "design": "Diseña",
+  "experience": {
+    "dekalabs": "Desde 2019, he formado parte del equipo de Dekalabs, contribuyendo activamente en la realización de proyectos de innovación para empresas a nivel mundial. Mi principal enfoque ha sido el desarrollo backend con Django, aunque también he gestionado roles en DevOps y he trabajado en el frontend utilizando Vue. Siempre he operado bajo la metodología Scrum, asegurando la calidad de los proyectos a través de tests rigurosos y documentando cada paso del proceso. Mi dedicación y versatilidad han sido esenciales para mantener y elevar los estándares de excelencia en Dekalabs."
+  },
+  "imagine": "Imagina",
+  "location": "Ubicación",
   "myDescription": "¡Hola! Me alegra mucho verte por aquí. Mi nombre es Rubén y soy un ingeniero de software ubicado en Valencia, España. Desde que era pequeño siempre me ha interesado el software y desde entonces he he aprendido acerca de cada parte del mismo, incluyendo diseño UI/UX, Frontend, Backend, DevOps y actualmente IA.",
-  "skillsAndExperience": "Habilidades y Experiencia 🛠️"
+  "myLocation": "Valencia, España",
+  "name": "Nombre",
+  "organization": "Organización",
+  "present": "Presente",
+  "projects": "Proyectos",
+  "repeat": "Repite",
+  "skillsAndExperience": "Habilidades y Experiencia 🛠️",
+  "title": "El mundo de Rubén",
+  "yearsExperience": "Años de Experiencia"
 }

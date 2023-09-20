@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "@/styles/Home.module.css";
 import Block from "@/components/Block";
+import Age from "@/components/Age";
 
 import {
   IconGithub,
@@ -13,6 +13,7 @@ import {
 
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
+import Experience from "@/components/Experiencie";
 
 const Home = () => {
   const { t } = useTranslation();
@@ -26,28 +27,33 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="max-w-6xl mx-auto px-4 pt-4 md:pt-32">
+      <main className="max-w-6xl mx-auto px-4 pt-4 md:pt-20 pb-4">
         <div className="contenedor mb-4">
-          <Block className="col-span-3 Developing flex justify-center md:flex-col items-center text-3xl md:text-4xl">
-            <div className="font-semibold pr-2 md:pb-2 md:pr-0 px-4">
-              {t("ad")}
+          <Block className="col-span-3 Developing flex gap-2 justify-center md:flex-col items-center font-semibold text-lg md:text-2xl">
+            <div className="flex gap-6 text-center md:text-left">
+              <span>☁️ {t("imagine")}</span>
+              <span>🦄 {t("design")}</span>
+            </div>
+            <div className="flex gap-6 text-center md:text-left">
+              <span>⚙️ {t("code")}</span>
+              <span>🔁 {t("repeat")}</span>
             </div>
           </Block>
 
           <div className="grid grid-cols-3 gap-4 Experience">
             <Block className="text-center flex justify-center flex-col">
-              <div className="font-bold text-3xl">+3</div>
-              <div className="text-xs">Years Experience</div>
+              <div className="font-bold text-3xl">+4</div>
+              <div className="text-xs">{t("yearsExperience")}</div>
             </Block>
 
             <Block className="text-center flex justify-center flex-col">
               <div className="font-bold text-3xl">+32</div>
-              <div className="text-xs">Handled Project</div>
+              <div className="text-xs">{t("projects")}</div>
             </Block>
 
             <Block className="text-center flex justify-center flex-col">
-              <div className="font-bold text-3xl">+53</div>
-              <div className="text-xs">Clients</div>
+              <div className="font-bold text-3xl">+2757</div>
+              <div className="text-xs">{t("contributions")}</div>
             </Block>
           </div>
 
@@ -81,7 +87,9 @@ const Home = () => {
               </ul>
               <ul className="font-bold text-right">
                 <li>Rubén Solano</li>
-                <li>22</li>
+                <li>
+                  <Age birthDate="2000-11-19" />
+                </li>
                 <li>{t("myLocation")}</li>
                 <li>Dekalabs</li>
               </ul>
@@ -94,11 +102,11 @@ const Home = () => {
           </Block>
 
           <Image
-            src="/me.png"
+            src="/me.jpg"
             alt="me"
             width={300}
             height={300}
-            className={`${styles.box} Me h-full w-full`}
+            className="Me h-full w-full object-cover rounded-2xl"
           />
         </div>
 
@@ -106,30 +114,7 @@ const Home = () => {
           <div className="font-bold text-xl mb-4">
             {t("skillsAndExperience")}
           </div>
-          <div className="flex gap-8 flex-col md:flex-row">
-            <div className="flex gap-4 shrink-0">
-              <Image
-                src="/dekalabs.png"
-                alt="Dekalabs"
-                width={48}
-                height={48}
-                className="w-12 h-12"
-              />
-
-              <div>
-                <div className="font-bold text-md">Software Engineer</div>
-                <div className="text-md">Dekalabs</div>
-                <div className="text-xs">2019 - Present</div>
-              </div>
-            </div>
-
-            <div>
-              Dekalabs es una consultoría de desarrollo de software en remoto
-              con sede en Valencia, ofrecen soluciones a medida en tecnologías
-              móviles nativas, webs, blockchain y machine learning. En Dekalabs
-              di mis primeros pasos como backend en 2019.
-            </div>
-          </div>
+          <Experience />
         </Block>
       </main>
     </>

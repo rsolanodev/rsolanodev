@@ -1,12 +1,22 @@
 {
-  "title": "Ruben's World",
-  "ad": "Developing software with a snake 🐍",
-  "name": "Name",
-  "age": "Age",
-  "location": "Location",
-  "organization": "Organization",
   "aboutMe": "About me 👨🏽‍💻",
-  "myLocation": "Valencia, Spain",
+  "age": "Age",
+  "code": "Code",
+  "contributions": "Contributions",
+  "design": "Design",
+  "experience": {
+    "dekalabs": "Since 2019, I have been a part of the Dekalabs team, actively contributing to the execution of innovation projects for companies worldwide. My primary focus has been backend development with Django, though I have also managed roles in DevOps and worked on the frontend using Vue. I have consistently operated under the Scrum methodology, ensuring project quality through rigorous testing and documenting every step of the process. My dedication and versatility have been essential in maintaining and raising the standards of excellence at Dekalabs."
+  },
+  "imagine": "Imagine",
+  "location": "Location",
   "myDescription": "Hello! Wonderful to see you here. My name is Rubén, and I am a software engineer based in Valencia, Spain. Ever since childhood, I have been fascinated with software, and over the years, I have extensively learned about every aspect of it, including UI/UX design, Frontend and Backend development, DevOps and currently AI.",
-  "skillsAndExperience": "Skills & Experience 🛠️"
+  "myLocation": "Valencia, Spain",
+  "name": "Name",
+  "organization": "Organization",
+  "present": "Present",
+  "projects": "Projects",
+  "repeat": "Repeat",
+  "skillsAndExperience": "Skills & Experience 🛠️",
+  "title": "Ruben's World",
+  "yearsExperience": "Years Experience"
 }

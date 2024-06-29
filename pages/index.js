@@ -102,11 +102,11 @@ const Home = () => {
           </Block>
 
           <Image
-            src="/me.jpg"
+            src="/me.png"
             alt="me"
             width={300}
             height={300}
-            className="Me h-full w-full object-cover rounded-2xl"
+            className="Me h-full w-full object-cover rounded-2xl glass"
           />
         </div>
 

@@ -188,10 +188,10 @@ body::before {
   grid-template-rows: 0.4fr 1.2fr 1.2fr 0.8fr;
   gap: 1rem;
   grid-template-areas:
-    "Developing Developing Developing Header Header Header Header Header"
-    "Developing Developing Developing Details Details Details Me Me"
-    "Experience Experience Experience About About About Me Me"
-    "Networks Networks Networks About About About Me Me";
+    "About About About Header Header Header Header Header"
+    "About About About Details Details Details Me Me"
+    "Experience Experience Experience Developing Developing Developing Me Me"
+    "Networks Networks Networks Developing Developing Developing Me Me";
 }
 
 .Developing {

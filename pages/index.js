@@ -29,15 +29,9 @@ const Home = () => {
 
       <main className="max-w-6xl mx-auto px-4 pt-4 md:pt-20 pb-4">
         <div className="contenedor mb-4">
-          <Block className="col-span-3 Developing flex gap-2 justify-center md:flex-col items-center font-semibold text-lg md:text-2xl">
-            <div className="flex gap-6 text-center md:text-left">
-              <span>☁️ {t("imagine")}</span>
-              <span>🦄 {t("design")}</span>
-            </div>
-            <div className="flex gap-6 text-center md:text-left">
-              <span>⚙️ {t("code")}</span>
-              <span>🔁 {t("repeat")}</span>
-            </div>
+          <Block className="About">
+            <div className="font-bold text-xl mb-2">{t("aboutMe")}</div>
+            <div>{t("myDescription")}</div>
           </Block>
 
           <div className="grid grid-cols-3 gap-4 Experience">
@@ -47,12 +41,12 @@ const Home = () => {
             </Block>
 
             <Block className="text-center flex justify-center flex-col">
-              <div className="font-bold text-3xl">+32</div>
+              <div className="font-bold text-3xl">+65</div>
               <div className="text-xs">{t("projects")}</div>
             </Block>
 
             <Block className="text-center flex justify-center flex-col">
-              <div className="font-bold text-3xl">+2757</div>
+              <div className="font-bold text-3xl">+3256</div>
               <div className="text-xs">{t("contributions")}</div>
             </Block>
           </div>
@@ -90,15 +84,21 @@ const Home = () => {
                 <li>
                   <Age birthDate="2000-11-19" />
                 </li>
-                <li>{t("myLocation")}</li>
-                <li>Dekalabs</li>
+                <li>🌴 {t("myLocation")}</li>
+                <li>🥘 Mercadona Tech</li>
               </ul>
             </div>
           </Block>
 
-          <Block className="About">
-            <div className="font-bold text-xl mb-2">{t("aboutMe")}</div>
-            <div>{t("myDescription")}</div>
+          <Block className="col-span-3 Developing flex gap-2 justify-center md:flex-col items-center font-semibold text-lg md:text-2xl">
+            <div className="flex gap-6 text-center md:text-left">
+              <span>☁️ {t("imagine")}</span>
+              <span>🦄 {t("design")}</span>
+            </div>
+            <div className="flex gap-6 text-center md:text-left">
+              <span>⚙️ {t("code")}</span>
+              <span>🔁 {t("repeat")}</span>
+            </div>
           </Block>
 
           <Image

@@ -1,9 +1,9 @@
 import Image from "next/image";
 
-import { useTranslation } from "next-i18next";
+import { useTranslations } from "next-intl";
 
 const Dekalabs = () => {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   return (
     <div className="flex gap-8 flex-col md:flex-row mb-8 p-4">
@@ -23,13 +23,6 @@ const Dekalabs = () => {
           </div>
         </div>
         <div>
-          Mi entusiasmo me llevó a buscar la empresa en la que quería hacer las
-          prácticas, una de las empresas que mas llamó mi atención fue Dekalabs.
-          Desde el momento en que me comentaron sobre el stack me propuse
-          aprender Django. Pasaron los meses y en vista de que podía compaginar
-          los estudios con el trabajo, decidí unirme a ellos.
-          <br />
-          <br />
           Durante mi trayectoria trabajé en el desarrollo y mantenimiento de
           proyectos en Django y Vue, haciendo uso de herramientas y servicios
           como Django Rest Framework, Celery, Docker, PostgreSQL, Redis,

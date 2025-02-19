@@ -1,0 +1,91 @@
+.sections {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.4fr 1.2fr 1.2fr 0.8fr;
+  gap: 1rem;
+  grid-template-areas:
+    "about about about header header header header header"
+    "about about about details details details me me"
+    "experience experience experience dev dev dev me me"
+    "social social social dev dev dev me me";
+  margin-bottom: 1.5rem;
+}
+
+.section {
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(38, 38, 38);
+  border-image: initial;
+}
+
+.section-dev {
+  grid-area: dev;
+}
+
+.section-experience {
+  grid-area: experience;
+}
+
+.section-social {
+  grid-area: social;
+}
+
+.section-header {
+  grid-area: header;
+}
+
+.section-details {
+  grid-area: details;
+}
+
+.section-me {
+  grid-area: me;
+}
+
+.section-about {
+  grid-area: about;
+}
+
+.gradient {
+  background-color: #16a085;
+  background-image: linear-gradient(132deg, #16a085 0%, #f4d03f 100%);
+}
+
+.gradient-inverse {
+  background-color: #f4d03f;
+  background-image: linear-gradient(132deg, #f4d03f 0%, #16a085 100%);
+}
+
+@media screen and (max-width: 768px) {
+  .sections {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .section {
+    grid-column: 1 / -1;
+  }
+
+  .section-profile {
+    grid-row: 1;
+  }
+  .section-header {
+    grid-row: 2;
+  }
+  .section-about {
+    grid-row: 3;
+  }
+  .section-details {
+    grid-row: 4;
+  }
+  .section-development {
+    grid-row: 5;
+  }
+  .section-experience {
+    grid-row: 6;
+  }
+}

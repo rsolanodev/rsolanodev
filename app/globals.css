@@ -5,6 +5,11 @@
 :root {
   --background: #000;
   --foreground: #fff;
+  --font-size-base: 16px;
+}
+
+* {
+  border-color: hsl(240 3.7% 15.9%);
 }
 
 html,

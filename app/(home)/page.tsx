@@ -7,6 +7,7 @@ import XLink from "@/components/links/XLink";
 import InstagramLink from "@/components/links/InstagramLink";
 import EmailLink from "@/components/links/EmailLink";
 import Experience from "@/components/Experience";
+import Section from "@/components/section";
 
 export function calculateAge(birthDate: string): number {
   const today = new Date();
@@ -31,11 +32,11 @@ export default function Home() {
   return (
     <main className="max-w-6xl mx-auto px-4 pt-4 md:pt-20 pb-4">
       <div className="sections">
-        <section className="section section-header font-bold text-xl">
+        <Section name="header" className="font-bold text-xl">
           👨‍💻​ Software Engineer
-        </section>
+        </Section>
 
-        <section className="section section-details">
+        <Section name="details">
           <div className="flex justify-between">
             <ul>
               <li>{t("name")}</li>
@@ -50,14 +51,17 @@ export default function Home() {
               <li>🥘 Mercadona Tech</li>
             </ul>
           </div>
-        </section>
+        </Section>
 
-        <section className="section section-about">
+        <Section name="about">
           <div className="font-bold text-xl mb-2">{t("aboutMe")}</div>
           <div>{t("myDescription")}</div>
-        </section>
+        </Section>
 
-        <section className="section section-dev col-span-3 flex gap-2 justify-center md:flex-col items-center font-semibold text-lg md:text-2xl">
+        <Section
+          name="dev"
+          className="col-span-3 flex gap-2 justify-center md:flex-col items-center font-semibold text-lg md:text-2xl"
+        >
           <div className="flex gap-6 text-center md:text-left">
             <span>☁️ {t("imagine")}</span>
             <span>🦄 {t("design")}</span>
@@ -66,17 +70,20 @@ export default function Home() {
             <span>⚙️ {t("code")}</span>
             <span>🔁 {t("repeat")}</span>
           </div>
-        </section>
+        </Section>
 
-        <section className="section section-social container flex justify-between items-center">
+        <Section
+          name="social"
+          className="container flex justify-between items-center"
+        >
           <GithubLink />
           <LinkedInLink />
           <XLink />
           <InstagramLink />
           <EmailLink />
-        </section>
+        </Section>
 
-        <section className="section section-experience grid grid-cols-3 gap-4">
+        <Section name="experience" className="grid grid-cols-3 gap-4">
           <div className="container text-center flex justify-center flex-col">
             <div className="font-bold text-3xl">+4</div>
             <div className="text-xs">{t("yearsExperience")}</div>
@@ -91,20 +98,20 @@ export default function Home() {
             <div className="font-bold text-3xl">+3256</div>
             <div className="text-xs">{t("contributions")}</div>
           </div>
-        </section>
+        </Section>
 
         <Image
           src="/images/me_adult.png"
           alt="Rubén as an adult"
-          width={300}
-          height={300}
+          width={500}
+          height={500}
           className="section-me h-full w-full object-cover rounded-2xl gradient-inverse"
         />
       </div>
 
-      <section className="section">
+      <Section>
         <Experience />
-      </section>
+      </Section>
     </main>
   );
 }

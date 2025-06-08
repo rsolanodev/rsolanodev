@@ -1,0 +1,32 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+---
+
+<header>
+  <nav>
+    <HeaderLink href="/">Inicio</HeaderLink>
+    <HeaderLink href="#projects">Proyectos</HeaderLink>
+    <HeaderLink href="#experience">Experiencia</HeaderLink>
+    <HeaderLink href="#education">Educación</HeaderLink>
+  </nav>
+</header>
+<style>
+  header {
+    margin: 0;
+    padding: 0 1em;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+  }
+  nav a {
+    padding: 1em 0.5em;
+    color: var(--black);
+    border-bottom: 4px solid transparent;
+    text-decoration: none;
+  }
+  nav a.active {
+    text-decoration: none;
+    border-bottom-color: #7593fe;
+  }
+</style>

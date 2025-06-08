@@ -1,0 +1,70 @@
+<button id="backToTop" aria-label="Volver arriba">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <line x1="12" y1="19" x2="12" y2="5"></line>
+    <polyline points="5 12 12 5 19 12"></polyline>
+  </svg>
+</button>
+
+<style>
+  #backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: none;
+    border-radius: 50%;
+    background-image: linear-gradient(
+      to right,
+      oklch(from var(--accent) 90% c h),
+      oklch(from var(--accent) 70% c h)
+    );
+    filter: drop-shadow(0 0 7px rgba(var(--primary), 0.6));
+    padding: 10px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease;
+    z-index: 1000;
+  }
+
+  #backToTop.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  #backToTop svg {
+    width: 24px;
+    height: 24px;
+    color: rgb(--primary);
+  }
+</style>
+
+<script is:inline>
+  const backToTopBtn = document.getElementById("backToTop");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+      backToTopBtn.classList.add("show");
+    } else {
+      backToTopBtn.classList.remove("show");
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+</script>

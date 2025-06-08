@@ -1,0 +1,137 @@
+---
+import { FEATURED_PROJECTS } from "../../consts";
+
+import { Image } from "astro:assets";
+import Vue from "./../tools/Vue.astro";
+import Django from "./../tools/Django.astro";
+import Sentry from "./../tools/Sentry.astro";
+import Polygon from "./../tools/Polygon.astro";
+import Celery from "./../tools/Celery.astro";
+import Postgres from "./../tools/Postgres.astro";
+import GraphQL from "./../tools/GraphQL.astro";
+import RabbitMQ from "./../tools/RabbitMQ.astro";
+import Elastic from "./../tools/Elastic.astro";
+
+function getTechComponent(tech: any) {
+  if (tech === "vue") {
+    return Vue;
+  }
+  if (tech === "django") {
+    return Django;
+  }
+  if (tech === "sentry") {
+    return Sentry;
+  }
+  if (tech === "polygon") {
+    return Polygon;
+  }
+  if (tech === "celery") {
+    return Celery;
+  }
+  if (tech === "postgres") {
+    return Postgres;
+  }
+  if (tech === "graphql") {
+    return GraphQL;
+  }
+  if (tech === "rabbitmq") {
+    return RabbitMQ;
+  }
+  if (tech === "elastic") {
+    return Elastic;
+  }
+}
+---
+
+<section id="projects">
+  <h5>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      ><circle cx="12" cy="12" r="10"></circle><path
+        d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path
+        d="M2 12h20"></path>
+    </svg>
+    Proyectos Destacados
+  </h5>
+
+  <div class="projects">
+    {
+      FEATURED_PROJECTS.map((project) => (
+        <article>
+          <div>
+            <Image src={project.image} alt="project" width={75} height={75} />
+          </div>
+          <div>
+            <h6>{project.title}</h6>
+            <p>{project.description}</p>
+            <div class="techs">
+              {project.techs.map((tech) => {
+                const TechComponent = getTechComponent(tech);
+                return TechComponent ? <TechComponent /> : null;
+              })}{" "}
+            </div>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  section {
+    padding: 1.5rem 0;
+  }
+
+  svg {
+    color: rgb(var(--primary));
+    filter: drop-shadow(0 0 7px rgba(var(--primary), 0.6));
+  }
+
+  h5 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  article {
+    padding: 1.5rem;
+    border-radius: 8px;
+    display: flex;
+    gap: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    article {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  h6 {
+    font-size: 1.5rem;
+  }
+
+  .techs {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+
+  p {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  img {
+    min-width: 75px;
+  }
+</style>

@@ -1,0 +1,21 @@
+---
+const { title } = Astro.props;
+---
+
+<div>
+  <slot />
+  <span>{title}</span>
+</div>
+
+<style>
+  div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: color-mix(in oklab, rgb(var(--primary)) 10%, transparent);
+    border-radius: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 15px;
+  }
+</style>

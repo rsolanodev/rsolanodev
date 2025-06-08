@@ -1,0 +1,142 @@
+---
+import { Image } from "astro:assets";
+import { EXPERIENCE } from "../../consts";
+---
+
+<section id="experience">
+  <h5>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path d="M12 12h.01"></path>
+      <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path><path
+        d="M22 13a18.15 18.15 0 0 1-20 0"></path><rect
+        width="20"
+        height="14"
+        x="2"
+        y="6"
+        rx="2"></rect>
+    </svg>
+    Experiencia
+  </h5>
+
+  <ul class="timeline">
+    {
+      EXPERIENCE.map((experience) => {
+        return (
+          <li>
+            <div class="stage">{experience.stage}</div>
+            <h6>
+              {experience.position}
+              <span style="padding: 0 .5rem">·</span>
+              <a href={experience.company_url} class="external">
+                {experience.company}
+              </a>
+            </h6>
+            <ul class="highlights">
+              {experience.highlights.map((highlight) => {
+                return <li>{highlight}</li>;
+              })}
+            </ul>
+
+            <div style="margin-left: 1.5rem">
+              <Image
+                src={experience.company_image}
+                alt="company image"
+                width={800}
+                height={400}
+              />
+            </div>
+          </li>
+        );
+      })
+    }
+  </ul>
+</section>
+
+<style>
+  section {
+    padding: 1.5rem 0;
+  }
+
+  svg {
+    color: rgb(var(--primary));
+    filter: drop-shadow(0 0 7px rgba(var(--primary), 0.6));
+  }
+
+  h5 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  h6 {
+    font-size: 18px;
+    margin-bottom: 1rem;
+  }
+
+  .timeline {
+    position: relative;
+    list-style: none;
+    border-left-width: 2px;
+    border-left-style: solid;
+    border-color: color-mix(in oklab, oklch(1 0 0) 10%, transparent);
+    padding: 0;
+    margin: 2rem 0 0 1rem;
+  }
+
+  .timeline > li {
+    position: relative;
+    margin-left: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .timeline > li::before {
+    position: absolute;
+    content: "";
+    z-index: 100;
+    top: 0.5rem;
+    left: -2.25rem;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-image: linear-gradient(
+      to right,
+      oklch(from var(--accent) 90% c h),
+      oklch(from var(--accent) 70% c h)
+    );
+    filter: drop-shadow(0 0 7px rgba(var(--primary), 0.6));
+  }
+
+  .stage {
+    display: inline-block;
+    font-size: 17px;
+    background-color: color-mix(in oklab, rgb(var(--primary)) 10%, transparent);
+    border-radius: 0.25rem;
+    padding: 0.15rem 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .highlights {
+    font-size: 16px;
+    margin-bottom: 1.5rem;
+  }
+
+  .highlights > li {
+    margin-bottom: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .highlights {
+      padding-left: 1.25rem;
+    }
+  }
+</style>

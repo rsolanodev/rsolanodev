@@ -1,0 +1,114 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+import { Image } from "astro:assets";
+import meImage from "../assets/images/me.png";
+import SocialLinks from "../components/SocialLinks.astro";
+import FeaturedProjects from "../components/sections/FeaturedProjects.astro";
+import Experience from "../components/sections/Experience.astro";
+import Education from "../components/sections/Education.astro";
+import BackToTop from "../components/BackToTop.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <style>
+      #brightless-top {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: -50;
+        min-height: 100dvh;
+        width: 100%;
+        background-image: radial-gradient(
+          circle 100dvh at 50% 10rem,
+          oklch(from var(--accent) 50% c h / 0.25),
+          transparent
+        );
+      }
+
+      #brightless-bottom {
+        position: absolute;
+        bottom: 0;
+        z-index: -50;
+        height: 100dvh;
+        width: 100%;
+        background-image: radial-gradient(
+          125% 125% at 50% 10%,
+          transparent 40%,
+          oklch(from var(--accent) 50% c h / 0.33) 100%
+        );
+      }
+
+      h5 {
+        font-weight: 500;
+      }
+
+      img {
+        mask-image: linear-gradient(to left, black 60%, transparent),
+          linear-gradient(to bottom, black 80%, transparent),
+          linear-gradient(to right, black 80%, transparent);
+        mask-composite: intersect;
+        position: relative;
+        top: -30px;
+      }
+
+      h3 {
+        font-weight: 500;
+        opacity: 0.65;
+      }
+
+      @media (max-width: 768px) {
+        h3 {
+          min-height: 85px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="brightless-top"></div>
+    <Header />
+    <main>
+      <section style="text-align: center; margin-bottom: 4rem;">
+        <h5>Hola, mi nombre es</h5>
+        <h1>Rubén Solano.</h1>
+        <h3><span id="typed"></span></h3>
+        <Image src={meImage} alt="me" width={500} class="meImage" />
+        <SocialLinks />
+      </section>
+
+      <FeaturedProjects />
+      <Experience />
+      <Education />
+    </main>
+    <BackToTop />
+    <Footer />
+    <div id="brightless-bottom"></div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"
+      integrity="sha512-hIlMpy2enepx9maXZF1gn0hsvPLerXoLHdb095CmRY5HG3bZfN7XPBZ14g+TUDH1aGgfLyPHmY9/zuU53smuMw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+    <script is:inline>
+      const options = {
+        strings: [
+          "Soy Ingeniero de Software.",
+          "Construyo productos digitales.",
+          "Soluciono problemas del mundo real.",
+          "Me apasiona lo que hago.",
+          "Me gusta contribuir a la sociedad.",
+          "Soy un albañil moderno.",
+        ],
+        typeSpeed: 50,
+        loop: true,
+      };
+      new Typed("#typed", options);
+    </script>
+  </body>
+</html>

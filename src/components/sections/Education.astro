@@ -1,0 +1,117 @@
+---
+import { EDUCATION } from "../../consts";
+---
+
+<section id="education">
+  <h5>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path
+        d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"
+      ></path>
+      <path d="M22 10v6"></path><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>
+    </svg>
+    Educación
+  </h5>
+
+  <ul class="timeline">
+    {
+      EDUCATION.map((edu) => {
+        return (
+          <li>
+            <div class="stage">{edu.stage}</div>
+            <h6>
+              {edu.position}
+              <span style="padding: 0 .5rem">·</span>
+              <a href={edu.school_url} class="external">
+                {edu.school}
+              </a>
+            </h6>
+          </li>
+        );
+      })
+    }
+  </ul>
+</section>
+
+<style>
+  section {
+    padding: 1.5rem 0;
+  }
+
+  svg {
+    color: rgb(var(--primary));
+    filter: drop-shadow(0 0 7px rgba(var(--primary), 0.6));
+  }
+
+  h5 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  h6 {
+    font-size: 18px;
+    margin-bottom: 1rem;
+  }
+
+  .timeline {
+    position: relative;
+    list-style: none;
+    border-left-width: 2px;
+    border-left-style: solid;
+    border-color: color-mix(in oklab, oklch(1 0 0) 10%, transparent);
+    padding: 0;
+    margin: 2rem 0 2rem 1rem;
+  }
+
+  .timeline > li {
+    position: relative;
+    margin-left: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .timeline > li::before {
+    position: absolute;
+    content: "";
+    z-index: 100;
+    top: 0.5rem;
+    left: -2.25rem;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-image: linear-gradient(
+      to right,
+      oklch(from var(--accent) 90% c h),
+      oklch(from var(--accent) 70% c h)
+    );
+    filter: drop-shadow(0 0 7px rgba(var(--primary), 0.6));
+  }
+
+  .stage {
+    display: inline-block;
+    font-size: 17px;
+    background-color: color-mix(in oklab, rgb(var(--primary)) 10%, transparent);
+    border-radius: 0.25rem;
+    padding: 0.15rem 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .highlights {
+    font-size: 16px;
+    margin-bottom: 1rem;
+  }
+
+  .highlights > li {
+    margin-bottom: 0.5rem;
+  }
+</style>

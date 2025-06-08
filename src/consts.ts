@@ -9,37 +9,41 @@ export const FEATURED_PROJECTS = [
   {
     title: "Mercadona Tech",
     description:
-      "Desarrollo en el backend de una aplicación interna para los gerentes de surtido: integración de nuevas funcionalidades para optimizar procesos, mejoras en la eficiencia del código y resolución de problemas.",
+      "Desarrollo en el backend de una aplicación interna para la gestión del catálogo de productos de Mercadona Online: integración de nuevas funcionalidades para optimizar procesos, mejoras en la eficiencia del código y resolución de problemas.",
     image: "/images/mercadona.png",
-    techs: ["django", "postgres", "rabbitmq", "sentry", "elastic"],
+    tools: ["django", "postgres", "rabbitmq", "sentry", "elastic"],
   },
   {
     title: "Dahl",
     description:
       "Desarrollo en el backend para la aplicación móvil que permite realizar compras inteligentes a distancia y en tienda sin colas: actualización de endpoints y ampliación de funcionalidades. Colaboré en el frontend para migrar de Vue 2 a 3.",
     image: "/images/dahl.jpeg",
-    techs: ["django", "postgres", "graphql", "celery", "sentry"],
+    tools: ["django", "postgres", "graphql", "celery", "sentry", "vue"],
+    company: "Dekalabs",
   },
   {
-    title: "Mastercard NFTs",
+    title: "APR València",
     description:
-      "Desarrollo de frontend y backend para generar y enviar NFTs a la wallet del usuario para apoyar a músicos emergentes: integración con servicio interno para desplegar contrato y mintear el token a la dirección deseada.",
-    image: "/images/mastercard.png",
-    techs: ["django", "postgres", "celery", "polygon", "sentry"],
+      "Colaboré en el desarrollo del frontend para facilitar la gestión de matrículas en zonas APR en Valencia por parte del personal adminsitrativo del Ayuntamiento.",
+    image: "/images/aprvalencia.png",
+    tools: ["vue", "sentry"],
+    company: "Dekalabs",
   },
   {
-    title: "Metrovacesa Kalio",
+    title: "Mastercard",
+    description:
+      "Desarrollo de backoffice y backend para generar y enviar NFTs a la wallet del usuario para apoyar a músicos emergentes: integración con servicio interno para desplegar contrato y mintear el token a la dirección deseada.",
+    image: "/images/mastercard.png",
+    tools: ["django", "postgres", "celery", "polygon", "sentry"],
+    company: "Dekalabs",
+  },
+  {
+    title: "Metrovacesa",
     description:
       "Desarrollo de backoffice y backend para generar y enviar NFTs a la wallet del usuario para la realización de pre-reservas de viviendas: integración con servicio interno para desplegar contrato y mintear el token a la dirección deseada.",
     image: "/images/metrovacesa.jpg",
-    techs: ["django", "postgres", "celery", "polygon", "sentry"],
-  },
-  {
-    title: "APR Funcionario",
-    description:
-      "Colaboré en el desarrollo del frontend para facilitar la gestión de matrículas en zonas APR en Valencia por parte de los funcionarios.",
-    image: "/images/aprvalencia.png",
-    techs: ["vue", "sentry"],
+    tools: ["django", "postgres", "celery", "polygon", "sentry"],
+    company: "Dekalabs",
   },
 ];
 

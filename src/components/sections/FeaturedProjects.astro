@@ -70,10 +70,13 @@ function getTechComponent(tech: any) {
             <Image src={project.image} alt="project" width={75} height={75} />
           </div>
           <div>
-            <h6>{project.title}</h6>
+            <h6>
+              {project.title}{" "}
+              {project.company ? <small>por {project.company}</small> : ""}
+            </h6>
             <p>{project.description}</p>
-            <div class="techs">
-              {project.techs.map((tech) => {
+            <div class="tools">
+              {project.tools.map((tech) => {
                 const TechComponent = getTechComponent(tech);
                 return TechComponent ? <TechComponent /> : null;
               })}{" "}
@@ -119,7 +122,7 @@ function getTechComponent(tech: any) {
     font-size: 1.5rem;
   }
 
-  .techs {
+  .tools {
     display: flex;
     gap: 0.5rem;
     flex-wrap: wrap;
@@ -133,5 +136,11 @@ function getTechComponent(tech: any) {
 
   img {
     min-width: 75px;
+  }
+
+  small {
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.85;
   }
 </style>

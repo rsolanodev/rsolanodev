@@ -9,14 +9,14 @@ export const FEATURED_PROJECTS = [
   {
     title: "Mercadona Tech",
     description:
-      "Desarrollo en el backend de una aplicación interna para la gestión del catálogo de productos de Mercadona Online: integración de nuevas funcionalidades para optimizar procesos, mejoras en la eficiencia del código y resolución de problemas.",
+      "Desarrollo en el backend de una aplicación interna para la gestión del catálogo de productos de Mercadona Online (empresa comercial líder de España en distribución alimentaria y productos de gran consumo): integración de nuevas funcionalidades para optimizar procesos, mejoras en la eficiencia del código y resolución de problemas.",
     image: "/images/mercadona.png",
     tools: ["django", "postgres", "rabbitmq", "sentry", "elastic"],
   },
   {
     title: "Dahl",
     description:
-      "Desarrollo en el backend para la aplicación móvil que permite realizar compras inteligentes a distancia y en tienda sin colas: actualización de endpoints y ampliación de funcionalidades. Colaboré en el frontend para migrar de Vue 2 a 3.",
+      "Desarrollo en el backend de la aplicación Dahl (empresa comercial líder de Suecia en fontanería, calefacción y suministro de agua), permitiendo a los usuarios realizar compras inteligentes tanto a distancia como en tienda física sin colas, gracias a la implementación de APIs robustas y eficientes. En el frontend colaboré en la migración de la aplicación de Vue 2 a Vue 3.",
     image: "/images/dahl.jpeg",
     tools: ["django", "postgres", "graphql", "celery", "sentry", "vue"],
     company: "Dekalabs",

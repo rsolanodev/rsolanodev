@@ -11,6 +11,8 @@ import FeaturedProjects from "../components/sections/FeaturedProjects.astro";
 import Experience from "../components/sections/Experience.astro";
 import Education from "../components/sections/Education.astro";
 import BackToTop from "../components/BackToTop.astro";
+
+import "aos/dist/aos.css";
 ---
 
 <!doctype html>
@@ -82,10 +84,16 @@ import BackToTop from "../components/BackToTop.astro";
     <Header />
     <main>
       <section style="text-align: center; margin-bottom: 4rem;">
-        <h5>Hola, mi nombre es</h5>
-        <h1>Rubén Solano.</h1>
+        <h5 data-aos="fade-down">Hola, mi nombre es</h5>
+        <h1 data-aos="fade-right">Rubén Solano.</h1>
         <h3><span id="typed"></span></h3>
-        <Image src={meImage} alt="me" width={500} class="meImage" />
+        <Image
+          data-aos="fade-up"
+          src={meImage}
+          alt="me"
+          width={500}
+          class="meImage"
+        />
         <SocialLinks />
       </section>
 
@@ -102,7 +110,9 @@ import BackToTop from "../components/BackToTop.astro";
       integrity="sha512-hIlMpy2enepx9maXZF1gn0hsvPLerXoLHdb095CmRY5HG3bZfN7XPBZ14g+TUDH1aGgfLyPHmY9/zuU53smuMw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"></script>
-    <script is:inline>
+    <script>
+      import AOS from "aos";
+
       const options = {
         strings: [
           "Soy Ingeniero de Software.",
@@ -116,6 +126,8 @@ import BackToTop from "../components/BackToTop.astro";
         loop: true,
       };
       new Typed("#typed", options);
+
+      AOS.init();
     </script>
   </body>
 </html>

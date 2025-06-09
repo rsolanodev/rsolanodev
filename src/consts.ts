@@ -10,14 +10,14 @@ export const FEATURED_PROJECTS = [
     title: "Mercadona Tech",
     description:
       "Desarrollo en el backend de una aplicación interna para la gestión del catálogo de productos de Mercadona Online (empresa comercial líder de España en distribución alimentaria y productos de gran consumo): integración de nuevas funcionalidades para optimizar procesos, mejoras en la eficiencia del código y resolución de problemas. Además, colaboro en el frontend cuando es necesario para apoyar al equipo",
-    image: "/images/mercadona.png",
+    image: "/images/mercadona.webp",
     tools: ["django", "postgres", "rabbitmq", "sentry", "elastic", "react"],
   },
   {
     title: "Dahl",
     description:
       "Desarrollo en el backend de la aplicación Dahl (empresa comercial líder de Suecia en fontanería, calefacción y suministro de agua), permitiendo a los usuarios realizar compras inteligentes tanto a distancia como en tienda física sin colas, gracias a la implementación de APIs robustas y eficientes. En el frontend colaboré en la migración de la aplicación de Vue 2 a Vue 3.",
-    image: "/images/dahl.jpeg",
+    image: "/images/dahl.webp",
     tools: ["django", "postgres", "graphql", "celery", "sentry", "vue"],
     company: "Dekalabs",
   },
@@ -25,7 +25,7 @@ export const FEATURED_PROJECTS = [
     title: "APR València",
     description:
       "Colaboré en el desarrollo del frontend para facilitar la gestión de matrículas en zonas APR en Valencia por parte del personal adminsitrativo del Ayuntamiento.",
-    image: "/images/aprvalencia.png",
+    image: "/images/aprvalencia.webp",
     tools: ["vue", "sentry"],
     company: "Dekalabs",
   },
@@ -33,7 +33,7 @@ export const FEATURED_PROJECTS = [
     title: "Mastercard",
     description:
       "Desarrollo de backoffice y backend para generar y enviar NFTs a la wallet del usuario para apoyar a músicos emergentes: integración con servicio interno para desplegar contrato y mintear el token a la dirección deseada.",
-    image: "/images/mastercard.png",
+    image: "/images/mastercard.webp",
     tools: ["django", "postgres", "celery", "polygon", "sentry"],
     company: "Dekalabs",
   },
@@ -41,7 +41,7 @@ export const FEATURED_PROJECTS = [
     title: "Metrovacesa",
     description:
       "Desarrollo de backoffice y backend para generar y enviar NFTs a la wallet del usuario para la realización de pre-reservas de viviendas: integración con servicio interno para desplegar contrato y mintear el token a la dirección deseada.",
-    image: "/images/metrovacesa.jpg",
+    image: "/images/metrovacesa.webp",
     tools: ["django", "postgres", "celery", "polygon", "sentry"],
     company: "Dekalabs",
   },
@@ -52,7 +52,7 @@ export const EXPERIENCE = [
     stage: "diciembre 2023 - actualidad",
     company: "Mercadona Tech",
     company_url: "https://www.mercadonatech.com/",
-    company_image: "/images/selling-lechugas.png",
+    company_image: "/images/selling-lechugas.webp",
     position: "Backend Software Engineer",
     highlights: [
       "Formo parte del equipo de Market, donde trabajamos en el backoffice para la gestión del catálogo de productos de Mercadona Online.",
@@ -66,7 +66,7 @@ export const EXPERIENCE = [
     stage: "octubre 2019 - diciembre 2023",
     company: "Dekalabs",
     company_url: "https://dekalabs.com/",
-    company_image: "/images/drinking-coffee.png",
+    company_image: "/images/drinking-coffee.webp",
     position: "Software Engineer",
     highlights: [
       "Formé parte de múltiples equipos de desarrollo, trabajando en proyectos de diferentes áreas como Backend, Frontend y DevOps.",

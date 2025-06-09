@@ -9,7 +9,7 @@ export const FEATURED_PROJECTS = [
   {
     title: "Mercadona Tech",
     description:
-      "Desarrollo en el backend de una aplicación interna para la gestión del catálogo de productos de Mercadona Online (empresa comercial líder de España en distribución alimentaria y productos de gran consumo): integración de nuevas funcionalidades para optimizar procesos, mejoras en la eficiencia del código y resolución de problemas. Además, colaboro en el frontend cuando es necesario para apoyar al equipo",
+      "Desarrollo en el backend de una aplicación interna para la gestión del catálogo de productos de Mercadona Online (empresa comercial líder de España en distribución alimentaria y productos de gran consumo): integración de nuevas funcionalidades para optimizar procesos, mejoras en la eficiencia del código y resolución de problemas. Además, colaboro en el frontend cuando es necesario para apoyar al equipo.",
     image: "/images/mercadona.webp",
     tools: ["django", "postgres", "rabbitmq", "sentry", "elastic", "react"],
   },
@@ -24,7 +24,7 @@ export const FEATURED_PROJECTS = [
   {
     title: "APR València",
     description:
-      "Colaboré en el desarrollo del frontend para facilitar la gestión de matrículas en zonas APR en Valencia por parte del personal adminsitrativo del Ayuntamiento.",
+      "Colaboré en el desarrollo del frontend para facilitar la gestión de matrículas en zonas APR en Valencia por parte del personal administrativo del Ayuntamiento.",
     image: "/images/aprvalencia.webp",
     tools: ["vue", "sentry"],
     company: "Dekalabs",

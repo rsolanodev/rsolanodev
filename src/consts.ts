@@ -9,9 +9,9 @@ export const FEATURED_PROJECTS = [
   {
     title: "Mercadona Tech",
     description:
-      "Desarrollo en el backend de una aplicación interna para la gestión del catálogo de productos de Mercadona Online (empresa comercial líder de España en distribución alimentaria y productos de gran consumo): integración de nuevas funcionalidades para optimizar procesos, mejoras en la eficiencia del código y resolución de problemas.",
+      "Desarrollo en el backend de una aplicación interna para la gestión del catálogo de productos de Mercadona Online (empresa comercial líder de España en distribución alimentaria y productos de gran consumo): integración de nuevas funcionalidades para optimizar procesos, mejoras en la eficiencia del código y resolución de problemas. Además, colaboro en el frontend cuando es necesario para apoyar al equipo",
     image: "/images/mercadona.png",
-    tools: ["django", "postgres", "rabbitmq", "sentry", "elastic"],
+    tools: ["django", "postgres", "rabbitmq", "sentry", "elastic", "react"],
   },
   {
     title: "Dahl",

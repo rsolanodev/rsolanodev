@@ -11,6 +11,7 @@ import Postgres from "./../tools/Postgres.astro";
 import GraphQL from "./../tools/GraphQL.astro";
 import RabbitMQ from "./../tools/RabbitMQ.astro";
 import Elastic from "./../tools/Elastic.astro";
+import React from "./../tools/React.astro";
 
 function getTechComponent(tech: any) {
   if (tech === "vue") {
@@ -39,6 +40,9 @@ function getTechComponent(tech: any) {
   }
   if (tech === "elastic") {
     return Elastic;
+  }
+  if (tech === "react") {
+    return React;
   }
 }
 ---
